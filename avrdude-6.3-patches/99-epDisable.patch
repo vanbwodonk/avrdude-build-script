@@ -1,0 +1,11 @@
+--- usb_libusb.c	2016-02-19 15:04:53.769231000 +0700
++++ /home/drw/Downloads/avrdude-6.3/usb_libusb.c	2016-02-16 02:59:22.000000000 +0700
+@@ -246,7 +246,7 @@
+ 		    }
+ 
+ 		  fd->usb.handle = udev;
+-		  //if (fd->usb.rep == 0)
++		  if (fd->usb.rep == 0)
+ 		    {
+ 		      /* Try finding out what our read endpoint is. */
+ 		      for (i = 0; i < dev->config[0].interface[iface].altsetting[0].bNumEndpoints; i++)
